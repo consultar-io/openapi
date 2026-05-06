@@ -1,0 +1,1733 @@
+openapi: 3.0.0
+info:
+  title: openapi
+  version: 1.0.0
+paths:
+  /api/v1/cnpj/consultar:
+    get:
+      summary: Consultar CNPJ
+      operationId: users_gabriel_barros_documents_bruno_apis_api_cnpj_consultar_cnpj_yml
+      description: |-
+        ## Consultar CNPJ
+
+        **(Consultar pelo CNPJ)**
+
+        Consulta detalhes de um CNPJ específico.
+      tags:
+        - API CNPJ
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  cnpj:
+                    type: string
+                  cnpj_formatado:
+                    type: string
+                  cnpj_base:
+                    type: string
+                  cnpj_ordem:
+                    type: string
+                  cnpj_dv:
+                    type: string
+                  razao_social:
+                    type: string
+                  nome_fantasia:
+                    type: string
+                  natureza_juridica_codigo:
+                    type: string
+                  natureza_juridica_descricao:
+                    type: string
+                  capital_social:
+                    type: integer
+                  capital_social_formatado:
+                    type: string
+                  porte_empresa_codigo:
+                    type: string
+                  porte_empresa_descricao:
+                    type: string
+                  ente_federativo_responsavel:
+                    type: string
+                  matriz_filial_codigo:
+                    type: string
+                  matriz_filial_descricao:
+                    type: string
+                  situacao_cadastral_codigo:
+                    type: string
+                  situacao_cadastral_descricao:
+                    type: string
+                  data_situacao_cadastral:
+                    type: string
+                  motivo_situacao_cadastral_codigo:
+                    type: string
+                  motivo_situacao_cadastral_descricao:
+                    type: string
+                  situacao_especial:
+                    type: string
+                  data_situacao_especial:
+                    type: string
+                    nullable: true
+                  cidade_exterior:
+                    type: string
+                  pais_exterior_codigo:
+                    type: string
+                  pais_exterior_descricao:
+                    type: string
+                  data_inicio_atividades:
+                    type: string
+                  cnae_principal_codigo:
+                    type: string
+                  cnae_principal_descricao:
+                    type: string
+                  lista_cnae_secundarios:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        codigo:
+                          type: string
+                        descricao:
+                          type: string
+                  tipo_logradouro:
+                    type: string
+                  logradouro:
+                    type: string
+                  numero:
+                    type: string
+                  complemento:
+                    type: string
+                  bairro:
+                    type: string
+                  cep:
+                    type: string
+                  uf:
+                    type: string
+                  municipio_codigo:
+                    type: string
+                  municipio_descricao:
+                    type: string
+                  ddd1:
+                    type: string
+                  telefone1:
+                    type: string
+                  ddd2:
+                    type: string
+                  telefone2:
+                    type: string
+                  ddd_fax:
+                    type: string
+                  fax:
+                    type: string
+                  email:
+                    type: string
+                  lista_qsa:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        tipo_qsa_codigo:
+                          type: string
+                        tipo_qsa_descricao:
+                          type: string
+                        nome_qsa:
+                          type: string
+                        cpf_cnpj_qsa:
+                          type: string
+                        cpf_cnpj_qsa_formatado:
+                          type: string
+                        qualificacao_qsa_codigo:
+                          type: string
+                        qualificacao_qsa_descricao:
+                          type: string
+                        data_entrada_qsa:
+                          type: string
+                        pais_exterior_qsa_codigo:
+                          type: string
+                        pais_exterior_qsa_descricao:
+                          type: string
+                        cpf_representante_legal_qsa:
+                          type: string
+                        nome_representante_qsa:
+                          type: string
+                        faixa_etaria_qsa_codigo:
+                          type: string
+                        faixa_etaria_qsa_descricao:
+                          type: string
+              example:
+                cnpj: '42515236000100'
+                cnpj_formatado: 42.515.236/0001-00
+                cnpj_base: '42515236'
+                cnpj_ordem: '0001'
+                cnpj_dv: '00'
+                razao_social: EXPANDA TECNOLOGIA DA INFORMACAO LTDA
+                nome_fantasia: EXPANDA
+                natureza_juridica_codigo: '2062'
+                natureza_juridica_descricao: Sociedade Empresária Limitada
+                capital_social: 250000
+                capital_social_formatado: R$ 250.000,00
+                porte_empresa_codigo: '01'
+                porte_empresa_descricao: Microempresa (ME)
+                ente_federativo_responsavel: ''
+                matriz_filial_codigo: '1'
+                matriz_filial_descricao: Matriz
+                situacao_cadastral_codigo: '02'
+                situacao_cadastral_descricao: Ativa
+                data_situacao_cadastral: '2021-06-29'
+                motivo_situacao_cadastral_codigo: '00'
+                motivo_situacao_cadastral_descricao: Sem motivo
+                situacao_especial: ''
+                data_situacao_especial: null
+                cidade_exterior: ''
+                pais_exterior_codigo: ''
+                pais_exterior_descricao: ''
+                data_inicio_atividades: '2021-06-29'
+                cnae_principal_codigo: '6209100'
+                cnae_principal_descricao: >-
+                  Suporte técnico, manutenção e outros serviços em tecnologia da
+                  informação
+                lista_cnae_secundarios:
+                  - codigo: '6201501'
+                    descricao: Desenvolvimento de programas de computador sob encomenda
+                  - codigo: '6201502'
+                    descricao: Web design
+                  - codigo: '6202300'
+                    descricao: >-
+                      Desenvolvimento e licenciamento de programas de computador
+                      customizáveis
+                  - codigo: '6203100'
+                    descricao: >-
+                      Desenvolvimento e licenciamento de programas de computador
+                      não-customizáveis
+                  - codigo: '6204000'
+                    descricao: Consultoria em tecnologia da informação
+                  - codigo: '6311900'
+                    descricao: >-
+                      Tratamento de dados, provedores de serviços de aplicação e
+                      serviços de hospedagem na internet
+                  - codigo: '6319400'
+                    descricao: >-
+                      Portais, provedores de conteúdo e outros serviços de
+                      informação na internet
+                  - codigo: '8599603'
+                    descricao: Treinamento em informática
+                tipo_logradouro: AVENIDA
+                logradouro: ENG LUIZ CARLOS BERRINI
+                numero: '1748'
+                complemento: CONJ 1710
+                bairro: CONJ 1710
+                cep: '04571000'
+                uf: SP
+                municipio_codigo: '7107'
+                municipio_descricao: SAO PAULO
+                ddd1: '41'
+                telefone1: '96869828'
+                ddd2: ''
+                telefone2: ''
+                ddd_fax: ''
+                fax: ''
+                email: meucnpj@contabilizei.com.br
+                lista_qsa:
+                  - tipo_qsa_codigo: '2'
+                    tipo_qsa_descricao: PF
+                    nome_qsa: GABRIEL DOMENEGHETTI DE BARROS
+                    cpf_cnpj_qsa: XXX670478XX
+                    cpf_cnpj_qsa_formatado: XXX.670.478-XX
+                    qualificacao_qsa_codigo: '49'
+                    qualificacao_qsa_descricao: Sócio-Administrador
+                    data_entrada_qsa: '2021-06-29'
+                    pais_exterior_qsa_codigo: ''
+                    pais_exterior_qsa_descricao: ''
+                    cpf_representante_legal_qsa: ''
+                    nome_representante_qsa: ''
+                    faixa_etaria_qsa_codigo: '3'
+                    faixa_etaria_qsa_descricao: 21-30
+                  - tipo_qsa_codigo: '2'
+                    tipo_qsa_descricao: PF
+                    nome_qsa: FERNANDO HENRIQUE PEREIRA PINHO
+                    cpf_cnpj_qsa: XXX805398XX
+                    cpf_cnpj_qsa_formatado: XXX.805.398-XX
+                    qualificacao_qsa_codigo: '49'
+                    qualificacao_qsa_descricao: Sócio-Administrador
+                    data_entrada_qsa: '2021-06-29'
+                    pais_exterior_qsa_codigo: ''
+                    pais_exterior_qsa_descricao: ''
+                    cpf_representante_legal_qsa: ''
+                    nome_representante_qsa: ''
+                    faixa_etaria_qsa_codigo: '3'
+                    faixa_etaria_qsa_descricao: 21-30
+                  - tipo_qsa_codigo: '2'
+                    tipo_qsa_descricao: PF
+                    nome_qsa: GABRIEL GONCALVES BAU
+                    cpf_cnpj_qsa: XXX133018XX
+                    cpf_cnpj_qsa_formatado: XXX.133.018-XX
+                    qualificacao_qsa_codigo: '22'
+                    qualificacao_qsa_descricao: Sócio
+                    data_entrada_qsa: '2023-07-03'
+                    pais_exterior_qsa_codigo: ''
+                    pais_exterior_qsa_descricao: ''
+                    cpf_representante_legal_qsa: ''
+                    nome_representante_qsa: ''
+                    faixa_etaria_qsa_codigo: '3'
+                    faixa_etaria_qsa_descricao: 21-30
+                  - tipo_qsa_codigo: '2'
+                    tipo_qsa_descricao: PF
+                    nome_qsa: BRUNO OLIVEIRA DE ANDRADE E SILVA
+                    cpf_cnpj_qsa: XXX240708XX
+                    cpf_cnpj_qsa_formatado: XXX.240.708-XX
+                    qualificacao_qsa_codigo: '22'
+                    qualificacao_qsa_descricao: Sócio
+                    data_entrada_qsa: '2024-09-19'
+                    pais_exterior_qsa_codigo: ''
+                    pais_exterior_qsa_descricao: ''
+                    cpf_representante_legal_qsa: ''
+                    nome_representante_qsa: ''
+                    faixa_etaria_qsa_codigo: '3'
+                    faixa_etaria_qsa_descricao: 21-30
+      parameters:
+        - name: cnpj
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: integer
+            format: int64
+          example: '42515236000100'
+      servers:
+        - url: https://consultar.io
+  /api/v1/cpf/consultar:
+    get:
+      summary: Consultar CPF
+      operationId: >-
+        users_gabriel_barros_documents_bruno_apis_api_cpf_data_de_nascimento_consultar_cpf_yml
+      description: |-
+        ## Consultar CPF
+
+        **(Consultar pelo CPF e Data de Nascimento)**
+
+        Consulta detalhes de um CPF específico.
+      tags:
+        - API CPF + Data de Nascimento
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  cpf:
+                    type: string
+                  nome:
+                    type: string
+                  data_nascimento:
+                    type: string
+                  situacao:
+                    type: string
+                  data_inscricao:
+                    type: string
+                  digito_verificador:
+                    type: string
+                  codigo_controle:
+                    type: string
+                  data_emissao:
+                    type: string
+                  hora_emissao:
+                    type: string
+                  qrcode_url:
+                    type: string
+              example:
+                cpf: '12345678900'
+                nome: MARIA DA SILVA SANTOS
+                data_nascimento: '1990-01-01'
+                situacao: REGULAR
+                data_inscricao: '2005-03-15'
+                digito_verificador: '00'
+                codigo_controle: 2406.5A89.0E54.747B
+                data_emissao: '2024-05-09'
+                hora_emissao: '12:05:47'
+                qrcode_url: >-
+                  https://servicos.receita.fazenda.gov.br/Servicos/CPF/ca/ResultadoAut.asp?cp=12345678900&cc=24065A890E54747B&de=09052024&he=120547&dv=00&em=01
+      parameters:
+        - name: cpf
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: integer
+            format: int64
+          example: '87135740009'
+        - name: data_nascimento
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: '1990-01-01'
+      servers:
+        - url: https://consultar.io
+  /api/v1/crbm/buscar:
+    get:
+      summary: Buscar CRBM
+      operationId: users_gabriel_barros_documents_bruno_apis_api_crbm_buscar_crbm_yml
+      description: |-
+        ## Buscar CRBM
+
+        **(Buscar pelo Nome)**
+
+        Realiza busca de profissionais pelo nome.
+      tags:
+        - API CRBM
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    regiao:
+                      type: string
+                    numero_registro:
+                      type: string
+                    categoria:
+                      type: string
+                    nome_razao_social:
+                      type: string
+              example:
+                - regiao: '01'
+                  numero_registro: '1234567'
+                  categoria: BIOMÉDICO
+                  nome_razao_social: JOÃO SILVA
+                - regiao: '01'
+                  numero_registro: '1234568'
+                  categoria: BIOMÉDICO
+                  nome_razao_social: JOÃO DOS SANTOS SILVA
+      parameters:
+        - name: nome_razao_social
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: joao silva
+      servers:
+        - url: https://consultar.io
+  /api/v1/crbm/consultar:
+    get:
+      summary: Consultar CRBM
+      operationId: users_gabriel_barros_documents_bruno_apis_api_crbm_consultar_crbm_yml
+      description: |-
+        ## Consultar CRBM
+
+        **(Consultar pelo CRBM)**
+
+        Consulta detalhes de um registro específico.
+      tags:
+        - API CRBM
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  regiao:
+                    type: string
+                  numero_registro:
+                    type: string
+                  categoria:
+                    type: string
+                  nome_razao_social:
+                    type: string
+                  situacao:
+                    type: string
+              example:
+                regiao: '01'
+                numero_registro: '123456'
+                categoria: BIOMÉDICO
+                nome_razao_social: JOÃO SILVA
+                situacao: ATIVO
+      parameters:
+        - name: regiao
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: integer
+            format: int32
+          example: '01'
+        - name: numero_registro
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: integer
+            format: int32
+          example: '1234567'
+      servers:
+        - url: https://consultar.io
+  /api/v1/crf/consultar:
+    get:
+      summary: Consultar CRF
+      operationId: users_gabriel_barros_documents_bruno_apis_api_crf_consultar_crf_yml
+      description: |-
+        ## Consultar CRF
+
+        **(Consultar pelo CRF)**
+
+        Consulta detalhes de um registro específico.
+      tags:
+        - API CRF
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  uf:
+                    type: string
+                  numero_registro:
+                    type: string
+                  categoria:
+                    type: string
+                  nome_razao_social:
+                    type: string
+                  situacao:
+                    type: string
+                  cidade:
+                    type: string
+                  data_inscricao:
+                    type: string
+                  data_inscricao_formatada:
+                    type: string
+                  cpf:
+                    type: string
+                  cpf_formatado:
+                    type: string
+              example:
+                uf: SP
+                numero_registro: '1234567'
+                categoria: FARMACÊUTICO
+                nome_razao_social: JOÃO DA SILVA
+                situacao: DEFINITIVO
+                cidade: SÃO PAULO
+                data_inscricao: '2025-08-29'
+                data_inscricao_formatada: 29/08/2025
+                cpf: '15685971001'
+                cpf_formatado: 156.859.710-01
+      parameters:
+        - name: uf
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: SP
+        - name: numero_registro
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: integer
+            format: int32
+          example: '1234567'
+      servers:
+        - url: https://consultar.io
+  /api/v1/crm/buscar:
+    get:
+      summary: Buscar CRM
+      operationId: users_gabriel_barros_documents_bruno_apis_api_crm_buscar_crm_yml
+      description: |-
+        ## Buscar CRM
+
+        (Buscar pelo Nome)
+
+        Realiza busca de médicos pelo nome.
+      tags:
+        - API CRM
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    uf:
+                      type: string
+                    numero_registro:
+                      type: string
+                    categoria:
+                      type: string
+                    nome_razao_social:
+                      type: string
+              example:
+                - uf: SP
+                  numero_registro: '1234567'
+                  categoria: MÉDICO
+                  nome_razao_social: JOÃO DA SILVA
+                - uf: SP
+                  numero_registro: '1234568'
+                  categoria: MÉDICO
+                  nome_razao_social: JOÃO DOS SANTOS SILVA
+      parameters:
+        - name: nome_razao_social
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: joao silva
+      servers:
+        - url: https://consultar.io
+  /api/v1/crm/consultar:
+    get:
+      summary: Consultar CRM
+      operationId: users_gabriel_barros_documents_bruno_apis_api_crm_consultar_crm_yml
+      description: |-
+        ## Consultar CRM
+
+        **(Consultar pelo CRM)**
+
+        Consulta detalhes de um registro específico.
+      tags:
+        - API CRM
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  uf:
+                    type: string
+                  numero_registro:
+                    type: string
+                  categoria:
+                    type: string
+                  nome_razao_social:
+                    type: string
+                  situacao:
+                    type: string
+                  tipo_inscricao:
+                    type: string
+                  especialidades:
+                    type: string
+              example:
+                uf: SP
+                numero_registro: '1234567'
+                categoria: MÉDICO
+                nome_razao_social: JOÃO DA SILVA
+                situacao: ATIVO
+                tipo_inscricao: PRINCIPAL
+                especialidades: >-
+                  CLÍNICA MÉDICA - RQE Nº 74493, ENDOCRINOLOGIA E METABOLOGIA -
+                  RQE Nº 85498
+      parameters:
+        - name: uf
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: SP
+        - name: numero_registro
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: integer
+            format: int32
+          example: '1234567'
+      servers:
+        - url: https://consultar.io
+  /api/v1/cro/buscar:
+    get:
+      summary: Buscar CRO
+      operationId: users_gabriel_barros_documents_bruno_apis_api_cro_buscar_cro_yml
+      description: |-
+        ## Buscar CRO
+
+        **(Buscar pelo Nome)**
+
+        Realiza busca de profissionais/estabelecimentos pelo nome.
+      tags:
+        - API CRO
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    uf:
+                      type: string
+                    numero_registro:
+                      type: string
+                    categoria:
+                      type: string
+                    nome_razao_social:
+                      type: string
+              example:
+                - uf: SP
+                  numero_registro: '1234567'
+                  categoria: CIRURGIÃO-DENTISTA
+                  nome_razao_social: JOÃO SILVA
+                - uf: SP
+                  numero_registro: '1234567'
+                  categoria: CIRURGIÃO-DENTISTA
+                  nome_razao_social: JOÃO DOS SANTOS SILVA
+      parameters:
+        - name: nome_razao_social
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: joao silva
+        - name: categoria
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: cd
+      servers:
+        - url: https://consultar.io
+  /api/v1/cro/consultar:
+    get:
+      summary: Consultar CRO
+      operationId: users_gabriel_barros_documents_bruno_apis_api_cro_consultar_cro_yml
+      description: |-
+        ## Consultar CRO
+
+        (Consultar pelo CRO)
+
+        Consulta detalhes de um registro específico.
+      tags:
+        - API CRO
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  uf:
+                    type: string
+                  numero_registro:
+                    type: string
+                  categoria:
+                    type: string
+                  nome_razao_social:
+                    type: string
+                  situacao:
+                    type: string
+              example:
+                uf: SP
+                numero_registro: '1234567'
+                categoria: CIRURGIÃO-DENTISTA
+                nome_razao_social: JOÃO SILVA
+                situacao: ATIVO
+      parameters:
+        - name: uf
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: SP
+        - name: numero_registro
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: integer
+            format: int32
+          example: '1234567'
+        - name: categoria
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: cd
+      servers:
+        - url: https://consultar.io
+  /api/v2/cep/buscar:
+    get:
+      summary: Buscar CEP
+      operationId: users_gabriel_barros_documents_bruno_apis_api_cep_buscar_cep_yml
+      description: |-
+        ## Buscar CEP
+
+        **(Buscar pelo Endereço)**
+
+        Consulta detalhes de um CEP específico.
+      tags:
+        - API CEP
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    cep:
+                      type: string
+                    cep_formatado:
+                      type: string
+                    tipo:
+                      type: string
+                    caixa_postal:
+                      type: boolean
+                    nome:
+                      type: string
+                      nullable: true
+                    nome_abreviado:
+                      type: string
+                      nullable: true
+                    tipo_logradouro:
+                      type: string
+                    nome_logradouro:
+                      type: string
+                    logradouro:
+                      type: string
+                    complemento:
+                      type: string
+                    bairro:
+                      type: string
+                    bairro_abreviado:
+                      type: string
+                    localidade:
+                      type: string
+                    uf:
+                      type: string
+              example:
+                - cep: '04571010'
+                  cep_formatado: 04571-010
+                  tipo: Logradouro
+                  caixa_postal: false
+                  nome: null
+                  nome_abreviado: null
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini
+                  complemento: '- até 1405 - lado ímpar'
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+                - cep: '04571011'
+                  cep_formatado: 04571-011
+                  tipo: Logradouro
+                  caixa_postal: false
+                  nome: null
+                  nome_abreviado: null
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini
+                  complemento: '- de 1407 ao fim - lado ímpar'
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+                - cep: '04571000'
+                  cep_formatado: 04571-000
+                  tipo: Logradouro
+                  caixa_postal: false
+                  nome: null
+                  nome_abreviado: null
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini
+                  complemento: '- até 99998 - lado par'
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+                - cep: '04571906'
+                  cep_formatado: 04571-906
+                  tipo: Grande Usuário
+                  caixa_postal: false
+                  nome: Condomínio Edifício Carmel
+                  nome_abreviado: Cond Ed Carmel
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini, 962
+                  complemento: null
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+                - cep: '04571900'
+                  cep_formatado: 04571-900
+                  tipo: Grande Usuário
+                  caixa_postal: false
+                  nome: Companhia Brasileira de Distribuição - Pão de Açúcar
+                  nome_abreviado: Companhia B Distribuição - Pão Açúca
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini, 105
+                  complemento: null
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+                - cep: '04571901'
+                  cep_formatado: 04571-901
+                  tipo: Grande Usuário
+                  caixa_postal: false
+                  nome: Edifício Morumbi
+                  nome_abreviado: Ed Morumbi
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini, 801
+                  complemento: null
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+                - cep: '04571936'
+                  cep_formatado: 04571-936
+                  tipo: Grande Usuário
+                  caixa_postal: false
+                  nome: Telefônica Brasil S/A
+                  nome_abreviado: Telefônica Brasil S/A
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini, 1376
+                  complemento: null
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+                - cep: '04571905'
+                  cep_formatado: 04571-905
+                  tipo: Grande Usuário
+                  caixa_postal: false
+                  nome: Jaú Construtora Ltda
+                  nome_abreviado: Jaú Construtora Ltda
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini, 936
+                  complemento: null
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+                - cep: '04571924'
+                  cep_formatado: 04571-924
+                  tipo: Grande Usuário
+                  caixa_postal: false
+                  nome: Centro Administrativo Bandeirante
+                  nome_abreviado: Centro Adm Bandeirante
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini, 267
+                  complemento: null
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+                - cep: '04571925'
+                  cep_formatado: 04571-925
+                  tipo: Grande Usuário
+                  caixa_postal: false
+                  nome: Edifício Condomínio Berrini 550
+                  nome_abreviado: Ed Cond Berrini 550
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini, 550
+                  complemento: null
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+                - cep: '04571926'
+                  cep_formatado: 04571-926
+                  tipo: Grande Usuário
+                  caixa_postal: false
+                  nome: Edifício Condomínio Palace Berrini
+                  nome_abreviado: Ed Cond Palace Berrini
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini, 716
+                  complemento: null
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+                - cep: '04571927'
+                  cep_formatado: 04571-927
+                  tipo: Grande Usuário
+                  caixa_postal: false
+                  nome: Edifício Condomínio Bandeirantes
+                  nome_abreviado: Ed Cond Bandeirantes
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini, 828
+                  complemento: null
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+                - cep: '04571928'
+                  cep_formatado: 04571-928
+                  tipo: Grande Usuário
+                  caixa_postal: false
+                  nome: Edifício Condomínio Estanplaza
+                  nome_abreviado: Ed Cond Estanplaza
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini, 857
+                  complemento: null
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+                - cep: '04571929'
+                  cep_formatado: 04571-929
+                  tipo: Grande Usuário
+                  caixa_postal: false
+                  nome: Edifício Condomínio San Thomaz
+                  nome_abreviado: Ed Cond San Thomaz
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini, 1139
+                  complemento: null
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+                - cep: '04571930'
+                  cep_formatado: 04571-930
+                  tipo: Grande Usuário
+                  caixa_postal: false
+                  nome: Edifício Condomínio Berrini Laura
+                  nome_abreviado: Ed Cond Berrini Laura
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini, 1140
+                  complemento: null
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+                - cep: '04571931'
+                  cep_formatado: 04571-931
+                  tipo: Grande Usuário
+                  caixa_postal: false
+                  nome: Edifício Condomínio Urca
+                  nome_abreviado: Ed Cond Urca
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini, 1178
+                  complemento: null
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+                - cep: '04571932'
+                  cep_formatado: 04571-932
+                  tipo: Grande Usuário
+                  caixa_postal: false
+                  nome: Edifício Condomínio Sudameris
+                  nome_abreviado: Ed Cond Sudameris
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini, 1297
+                  complemento: null
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+                - cep: '04571933'
+                  cep_formatado: 04571-933
+                  tipo: Grande Usuário
+                  caixa_postal: false
+                  nome: Phenix
+                  nome_abreviado: Phenix
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini, 1375
+                  complemento: null
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+                - cep: '04571934'
+                  cep_formatado: 04571-934
+                  tipo: Grande Usuário
+                  caixa_postal: false
+                  nome: Edifício Condomínio Arthur Bernardes
+                  nome_abreviado: Ed Cond Arthur Bernardes
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini, 1500
+                  complemento: null
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+                - cep: '04571935'
+                  cep_formatado: 04571-935
+                  tipo: Grande Usuário
+                  caixa_postal: false
+                  nome: Berrini Trade Center
+                  nome_abreviado: Berrini T Center
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini, 1700
+                  complemento: null
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+                - cep: '04571903'
+                  cep_formatado: 04571-903
+                  tipo: Grande Usuário
+                  caixa_postal: false
+                  nome: Texas Instrumentos Eletrônicos do Brasil
+                  nome_abreviado: Texas I E Brasil
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini, 1461
+                  complemento: null
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+                - cep: '04571902'
+                  cep_formatado: 04571-902
+                  tipo: Grande Usuário
+                  caixa_postal: false
+                  nome: Sampaio Ferreira
+                  nome_abreviado: Sampaio Ferreira
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini, 1253
+                  complemento: null
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+                - cep: '04571989'
+                  cep_formatado: 04571-989
+                  tipo: Locker
+                  caixa_postal: true
+                  nome: LCK Locker Vivo Berrini
+                  nome_abreviado: LCK Locker Vivo Berrini
+                  tipo_logradouro: Avenida
+                  nome_logradouro: Engenheiro Luiz Carlos Berrini
+                  logradouro: Avenida Engenheiro Luiz Carlos Berrini, 1376
+                  complemento: null
+                  bairro: Cidade Monções
+                  bairro_abreviado: Cid Monções
+                  localidade: São Paulo
+                  uf: SP
+      parameters:
+        - name: logradouro
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: Avenida Engenheiro Luiz Carlos Berrini
+        - name: localidade
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: São Paulo
+        - name: uf
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: SP
+      servers:
+        - url: https://consultar.io
+  /api/v2/cep/consultar:
+    get:
+      summary: Consultar CEP
+      operationId: users_gabriel_barros_documents_bruno_apis_api_cep_consultar_cep_yml
+      description: |-
+        ## Consultar CEP
+
+        **(Consultar pelo CEP)**
+
+        Consulta detalhes de um CEP específico.
+      tags:
+        - API CEP
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  cep:
+                    type: string
+                  cep_formatado:
+                    type: string
+                  tipo:
+                    type: string
+                  caixa_postal:
+                    type: boolean
+                  nome:
+                    type: string
+                    nullable: true
+                  nome_abreviado:
+                    type: string
+                    nullable: true
+                  tipo_logradouro:
+                    type: string
+                  nome_logradouro:
+                    type: string
+                  logradouro:
+                    type: string
+                  complemento:
+                    type: string
+                  bairro:
+                    type: string
+                  bairro_abreviado:
+                    type: string
+                  localidade:
+                    type: string
+                  uf:
+                    type: string
+              example:
+                cep: '04571000'
+                cep_formatado: 04571-000
+                tipo: Logradouro
+                caixa_postal: false
+                nome: null
+                nome_abreviado: null
+                tipo_logradouro: Avenida
+                nome_logradouro: Engenheiro Luiz Carlos Berrini
+                logradouro: Avenida Engenheiro Luiz Carlos Berrini
+                complemento: '- até 99998 - lado par'
+                bairro: Cidade Monções
+                bairro_abreviado: Cid Monções
+                localidade: São Paulo
+                uf: SP
+      parameters:
+        - name: cep
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: integer
+            format: int32
+          example: '04571000'
+      servers:
+        - url: https://consultar.io
+  /api/v2/geocodificacao/reversa/consultar:
+    get:
+      summary: Consultar Geocodificação Reversa
+      operationId: >-
+        users_gabriel_barros_documents_bruno_apis_api_geocodifica_o_consultar_geocodifica_o_reversa_yml
+      description: |-
+        ## Consultar Geocodificação Reversa
+
+        **(Consultar pela Latitude/Longitude)**
+
+        Consulta o endereço a partir de coordenadas geográficas.
+      tags:
+        - API Geocodificação
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  licenca:
+                    type: string
+                  logradouro:
+                    type: string
+                  bairro:
+                    type: string
+                  localidade:
+                    type: string
+                  uf:
+                    type: string
+                  latitude:
+                    type: number
+                  longitude:
+                    type: number
+              example:
+                licenca: https://consultar.io/licencas
+                logradouro: Avenida Engenheiro Luís Carlos Berrini
+                bairro: Vila Olímpia
+                localidade: São Paulo
+                uf: SP
+                latitude: -23.6004352
+                longitude: -46.6910368
+      parameters:
+        - name: coordenadas
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: '-23.6004352,-46.6910367'
+      servers:
+        - url: https://consultar.io
+  /api/v2/geocodificacao/consultar:
+    get:
+      summary: Consultar Geocodificação
+      operationId: >-
+        users_gabriel_barros_documents_bruno_apis_api_geocodifica_o_consultar_geocodifica_o_yml
+      description: |-
+        ## Consultar Geocodificação
+
+        **(Consultar pelo Endereço)**
+
+        Consulta as coordenadas geográficas de um endereço específico.
+      tags:
+        - API Geocodificação
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  licenca:
+                    type: string
+                  logradouro:
+                    type: string
+                  bairro:
+                    type: string
+                  localidade:
+                    type: string
+                  uf:
+                    type: string
+                  latitude:
+                    type: number
+                  longitude:
+                    type: number
+              example:
+                licenca: https://consultar.io/licencas
+                logradouro: Avenida Engenheiro Luís Carlos Berrini
+                bairro: Vila Olímpia
+                localidade: São Paulo
+                uf: SP
+                latitude: -23.6004352
+                longitude: -46.6910367
+      parameters:
+        - name: endereco
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: AVENIDA ENGENHEIRO LUIZ CARLOS BERRINI, 1748, SAO PAULO, SP
+      servers:
+        - url: https://consultar.io
+  /api/v2/ie/consultar/todas:
+    get:
+      summary: Consultar IE em Todas as UFs
+      operationId: >-
+        users_gabriel_barros_documents_bruno_apis_api_inscri_o_estadual_consultar_ie_em_todas_as_ufs_yml
+      description: |-
+        ## Consultar IE em Todas as UFs
+
+        **(Consultar pelo CNPJ ou CPF)**
+
+        Consulta detalhes de todas as Inscrições Estaduais em todas as UFs.
+      tags:
+        - API Inscrição Estadual
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    uf:
+                      type: string
+                    status_code:
+                      type: integer
+                    success:
+                      type: boolean
+                    message:
+                      type: string
+                    results:
+                      type: array
+                      items:
+                        type: string
+              example:
+                - uf: AC
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: AL
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: AM
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: AP
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: BA
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: CE
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: DF
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: ES
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: GO
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: MA
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: MG
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: MS
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: MT
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: PA
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: PB
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: PE
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: PI
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: PR
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: RJ
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: RN
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: RO
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: RR
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: RS
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: SC
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: SE
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+                - uf: SP
+                  status_code: 200
+                  success: true
+                  message: ''
+                  results:
+                    - cnpj: '61585865150633'
+                      razao_social: RAIA DROGASIL S/A
+                      nome_fantasia: ''
+                      uf_ie: SP
+                      ie: '535612879117'
+                      tipo_ie: NÃO INFORMADO
+                      situacao_ie: HABILITADO
+                      situacao_cnpj: NÃO INFORMADO
+                      data_situacao_uf: 22/06/2016
+                      data_inicio: 22/06/2016
+                      data_fim: ''
+                      cnae_principal_codigo: '4771701'
+                      regime_tributacao: NORMAL - REGIME PERIÓDICO DE APURAÇÃO
+                      ie_destinatario: NÃO INFORMADO
+                      porte_empresa: NÃO INFORMADO
+                      credito_presumido: NÃO INFORMADO
+                      tipo_produtor: NÃO INFORMADO
+                      logradouro: AVENIDA INDEPENDENCIA
+                      numero: '2906'
+                      complemento: ''
+                      bairro: ALEMAES
+                      cep: '13416240'
+                      uf: SP
+                      municipio_codigo: '3538709'
+                      municipio_descricao: PIRACICABA
+                - uf: TO
+                  status_code: 404
+                  success: false
+                  message: >-
+                    Contribuinte não encontrado no banco de dados da SEFAZ da UF
+                    informada.
+                  results: []
+      parameters:
+        - name: cnpj
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: integer
+            format: int64
+          example: '61585865150633'
+      servers:
+        - url: https://consultar.io
+  /api/v2/ie/consultar:
+    get:
+      summary: Consultar IE por UF
+      operationId: >-
+        users_gabriel_barros_documents_bruno_apis_api_inscri_o_estadual_consultar_ie_por_uf_yml
+      description: |-
+        ## Consultar IE por UF
+
+        **(Consultar pelo CNPJ ou CPF)**
+
+        Consulta detalhes de uma Inscrição Estadual específica.
+      tags:
+        - API Inscrição Estadual
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    cnpj:
+                      type: string
+                    razao_social:
+                      type: string
+                    nome_fantasia:
+                      type: string
+                    uf_ie:
+                      type: string
+                    ie:
+                      type: string
+                    tipo_ie:
+                      type: string
+                    situacao_ie:
+                      type: string
+                    situacao_cnpj:
+                      type: string
+                    data_situacao_uf:
+                      type: string
+                    data_inicio:
+                      type: string
+                    data_fim:
+                      type: string
+                    cnae_principal_codigo:
+                      type: string
+                    regime_tributacao:
+                      type: string
+                    ie_destinatario:
+                      type: string
+                    porte_empresa:
+                      type: string
+                    credito_presumido:
+                      type: string
+                    tipo_produtor:
+                      type: string
+                    logradouro:
+                      type: string
+                    numero:
+                      type: string
+                    complemento:
+                      type: string
+                    bairro:
+                      type: string
+                    cep:
+                      type: string
+                    uf:
+                      type: string
+                    municipio_codigo:
+                      type: string
+                    municipio_descricao:
+                      type: string
+              example:
+                - cnpj: '61585865150633'
+                  razao_social: RAIA DROGASIL S/A
+                  nome_fantasia: ''
+                  uf_ie: SP
+                  ie: '535612879117'
+                  tipo_ie: NÃO INFORMADO
+                  situacao_ie: HABILITADO
+                  situacao_cnpj: NÃO INFORMADO
+                  data_situacao_uf: 22/06/2016
+                  data_inicio: 22/06/2016
+                  data_fim: ''
+                  cnae_principal_codigo: '4771701'
+                  regime_tributacao: NORMAL - REGIME PERIÓDICO DE APURAÇÃO
+                  ie_destinatario: NÃO INFORMADO
+                  porte_empresa: NÃO INFORMADO
+                  credito_presumido: NÃO INFORMADO
+                  tipo_produtor: NÃO INFORMADO
+                  logradouro: AVENIDA INDEPENDENCIA
+                  numero: '2906'
+                  complemento: ''
+                  bairro: ALEMAES
+                  cep: '13416240'
+                  uf: SP
+                  municipio_codigo: '3538709'
+                  municipio_descricao: PIRACICABA
+      parameters:
+        - name: uf
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: string
+          example: SP
+        - name: cnpj
+          in: query
+          description: ''
+          required: true
+          schema:
+            type: integer
+            format: int64
+          example: '61585865150633'
+      servers:
+        - url: https://consultar.io
+servers: []
+components:
+  schemas: {}
+  requestBodies: {}
+  securitySchemes: {}
